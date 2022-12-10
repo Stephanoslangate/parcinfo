@@ -1,7 +1,8 @@
-package com.groupeisi.controller;
+package com.groupeuisi.ParcInfo.controller;
+import com.groupeuisi.ParcInfo.Domaine.*;
+import com.groupeuisi.ParcInfo.service.AppRolesService;
+import com.groupeuisi.ParcInfo.service.*;
 
-import com.groupeisi.domain.AppRolesDTO;
-import com.groupeisi.service.AppRolesService;
 import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 import org.springframework.data.domain.Page;
@@ -35,11 +36,13 @@ public class AppRolesController {
         return appRolesService.createAppRole(appRolesDTO);
     }
 
-    @PutMapping("{id}")
+    //@PutMapping("{id}")
     //@IsAdmin
-    public AppRolesDTO updateAppRoles(@PathVariable("id") int id, @Valid @RequestBody AppRolesDTO appRolesDTO) {
-        return appRolesService.updateAppRoles(id, appRolesDTO);
-    }
+	/*
+	 * public AppRolesDTO updateAppRoles(@PathVariable("id") int
+	 * id, @Valid @RequestBody AppRolesDTO appRolesDTO) { return
+	 * appRolesService.updateAppRoles(id, appRolesDTO); }
+	 */
 
     @DeleteMapping("{id}")
     public void deleteAppRoles(@PathVariable("id") int id) {
